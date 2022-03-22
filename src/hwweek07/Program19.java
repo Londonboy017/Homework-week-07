@@ -12,7 +12,7 @@ public class Program19 {
         }
         System.out.println("Original Array: " + Arrays.toString(num));//array list
         for (int i = 0; i < num.length; i++){
-            avg=(avg+num[i])/5;
+            avg=(avg+num[i])/num.length;
 
         }
         //avg = (num[0] + num[1] + num[2] + num[3] + num[4]) / 5;//Average calculation
