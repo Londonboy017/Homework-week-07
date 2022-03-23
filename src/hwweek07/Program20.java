@@ -1,22 +1,38 @@
 package hwweek07;
-
+import java.util.Scanner;
 public class Program20 {
     public static void main(String[] args) {
-        int[] array = {3, 5, 23, 43, 12};
-        int element = 23;
-        Program20.array1(array, element);//method calling in main method
-    }
-//no return type with parameter
-    public static void array1(int[] array, int element) {
-        int[] input = array;//local variable
-        int list = element;//local variable
-        for (int i = 0; i < input.length; i++) {
 
-            if (input[i] == list)  //condition to check element in array
-            { System.out.println("YES");
-            }else{
-                System.out.println("Element not contains in this array");
+        int a[] = {100, 200, 240, 410, 250, 160};
+        boolean check = false;
+
+        Scanner sc = new Scanner(System.in);//scanner object creation
+
+        System.out.println("Enter number you want to find: ");
+        int num = sc.nextInt();//user input
+        
+        int i;
+        for( i =0;i<a.length;i++)
+        {
+            if(a[i] == num)  //to check element in array
+            {
+                check=true;
+                break;
             }
         }
+        if(check)
+        {
+            System.out.println("Element found in the array");
+            for ( int j = 0 ; j < a.length ; j++ )
+            {
+                System.out.print(a[j] + " ");
+            }
+
+        }
+        else
+        {
+            System.out.println("Element not found");
+        }
+
     }
 }
